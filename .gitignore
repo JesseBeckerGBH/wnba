@@ -1,4 +1,5 @@
 .env
+.env.*
 db/*.duckdb
 db/*.duckdb.wal
 data/raw/
@@ -8,3 +9,17 @@ __pycache__/
 *.pyc
 *.pyo
 .DS_Store
+
+# virtualenv (109MB) — self-ignores but be explicit
+venv/
+.venv/
+
+# node / MCP server build artifacts (node_modules is 524MB)
+node_modules/
+mcp/node_modules/
+mcp/dist/
+
+# ephemeral run outputs / logs
+*.log
+scripts/sota_log.txt
+today_bets*.txt

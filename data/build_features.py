@@ -59,9 +59,14 @@ def update_elo(r_a: float, r_b: float, a_won: bool):
 # ── Possessions estimate ───────────────────────────────────────────────────────
 def possessions(fga, oreb, tov, fta, fg3a=0):
     """Estimate possessions from box score."""
-    if fga is None or fga == 0:
+    def _n(v):  # convert pd.NA / None to 0.0
+        try:
+            return float(v) if v is not None else 0.0
+        except (TypeError, ValueError):
+            return 0.0
+    if fga is None or _n(fga) == 0:
         return None
-    return (fga - (oreb or 0) + (tov or 0) + 0.44 * (fta or 0))
+    return (_n(fga) - _n(oreb) + _n(tov) + 0.44 * _n(fta))
 
 
 def build_features(conn: duckdb.DuckDBPyConnection, season_filter: int | None = None):
@@ -264,17 +269,29 @@ def build_features(conn: duckdb.DuckDBPyConnection, season_filter: int | None = 
                 bs.fta if bs is not None else None,
             ) if bs is not None else None
 
+            def _f(v):
+                """Safe float from pandas Series value — returns None for NA/None/0."""
+                try:
+                    f = float(v)
+                    return f if f == f else None  # NaN check
+                except (TypeError, ValueError):
+                    return None
+
+            bs_tov  = _f(bs.tov)  if bs is not None else None
+            bs_reb  = _f(bs.reb)  if bs is not None else None
+            obs_reb = _f(opp_bs.reb) if opp_bs is not None else None
+
             team_history[team_id].append({
                 "date":       date,
                 "opp_id":     opp_id,
                 "won":        float(won_flag) if won_flag is not None else 0.5,
                 "pts_for":    pts_for,
                 "pts_against": pts_against,
-                "fg_pct":     float(bs.fg_pct)  if bs is not None and bs.fg_pct  else None,
-                "fg3_pct":    float(bs.fg3_pct) if bs is not None and bs.fg3_pct else None,
-                "ft_pct":     float(bs.ft_pct)  if bs is not None and bs.ft_pct  else None,
-                "tov_rate":   (float(bs.tov) / poss * 100) if (bs is not None and bs.tov and poss) else None,
-                "reb_margin": (int(bs.reb) - int(opp_bs.reb)) if (bs and opp_bs and bs.reb and opp_bs.reb) else None,
+                "fg_pct":     _f(bs.fg_pct)  if bs is not None else None,
+                "fg3_pct":    _f(bs.fg3_pct) if bs is not None else None,
+                "ft_pct":     _f(bs.ft_pct)  if bs is not None else None,
+                "tov_rate":   (bs_tov / poss * 100) if (bs_tov and poss) else None,
+                "reb_margin": (bs_reb - obs_reb) if (bs_reb is not None and obs_reb is not None) else None,
                 "pace":       poss,
                 "off_rating": (pts_for / poss * 100) if (pts_for and poss) else None,
                 "def_rating": (pts_against / poss * 100) if (pts_against and poss) else None,

@@ -255,12 +255,17 @@ def ingest_boxscores(conn: duckdb.DuckDBPyConnection, season_year: int) -> int:
     for i, game_id in enumerate(to_load):
         if i % 20 == 0 and i > 0:
             print(f"    Progress: {i}/{len(to_load)}...")
-        try:
-            bs = BoxScoreTraditionalV2(game_id=game_id, timeout=30)
-            team_df = bs.team_stats.get_data_frame()
-        except Exception as e:
-            print(f"    WARN: {game_id} → {e}")
-            time.sleep(2)
+        team_df = None
+        for attempt in range(3):
+            try:
+                bs = BoxScoreTraditionalV2(game_id=game_id, timeout=45)
+                team_df = bs.team_stats.get_data_frame()
+                break
+            except Exception as e:
+                wait = (attempt + 1) * 5
+                print(f"    WARN: {game_id} attempt {attempt+1}/3 failed ({type(e).__name__}) - wait {wait}s")
+                time.sleep(wait)
+        if team_df is None:
             continue
 
         for _, row in team_df.iterrows():

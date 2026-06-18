@@ -198,6 +198,14 @@ def load_game_data(conn: duckdb.DuckDBPyConnection) -> pd.DataFrame:
     df["away_fg_pct"]             = df["away_fg_pct"]
     df["away_fg3_pct"]            = df["away_fg3_pct"]
 
+    # ── Totals target: over/under expanding median (no look-ahead) ────────────
+    # For each game, threshold = median of all PRIOR game totals.
+    # Avoids data leakage across walk-forward windows.
+    total_pts = pd.to_numeric(df["total_pts"], errors="coerce")
+    expanding_med = total_pts.expanding(min_periods=20).median().shift(1)
+    df["total_over"] = (total_pts > expanding_med).astype("Int64")
+    df["total_over"] = df["total_over"].where(expanding_med.notna(), other=pd.NA)
+
     return df
 
 

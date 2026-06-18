@@ -37,9 +37,9 @@ MAX_BET_FRAC = 0.10   # hard cap: max 10% of bankroll per bet
 
 # Manual fallback for --dry-run
 MANUAL_GAMES = [
-    # {"home": "Las Vegas Aces", "away": "New York Liberty",
-    #  "ml_home": 1.65, "ml_away": 2.30,
-    #  "total_line": 162.5, "over_odds": 1.91, "under_odds": 1.91},
+    {"home": "Las Vegas Aces", "away": "New York Liberty",
+     "ml_home": 1.65, "ml_away": 2.30,
+     "total_line": 162.5, "over_odds": 1.91, "under_odds": 1.91},
 ]
 
 DB_PATH = os.getenv("WNBA_DB_PATH", str(_ROOT / "db" / "wnba.duckdb"))
@@ -227,6 +227,7 @@ def run(args):
 
 
 def main():
+    global MIN_EDGE
     p = argparse.ArgumentParser(description="WNBA daily bet sheet")
     p.add_argument("--bankroll",   type=float, default=1000.0)
     p.add_argument("--min-edge",   type=float, default=MIN_EDGE)

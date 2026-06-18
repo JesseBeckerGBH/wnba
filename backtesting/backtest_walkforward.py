@@ -167,7 +167,8 @@ def run_single_target(
         # Sharpe (daily-like from PnL series)
         if len(pnl_series) > 1:
             returns = np.diff(pnl_series) / np.array(pnl_series[:-1])
-            sharpe  = float(np.mean(returns) / (np.std(returns) + 1e-9) * np.sqrt(len(pnl_series)))
+            std_r = np.std(returns)
+            sharpe = float(np.mean(returns) / std_r * np.sqrt(len(pnl_series))) if std_r > 1e-4 else 0.0
         else:
             sharpe = 0.0
 
