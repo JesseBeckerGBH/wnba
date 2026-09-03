@@ -27,19 +27,12 @@ import pathlib
 import sys
 from datetime import date, timedelta
 
-import duckdb
 import numpy as np
 from dotenv import load_dotenv
 
 _ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(_ROOT))
 load_dotenv(str(_ROOT / ".env"))
-
-from model.stack_train import (
-    load_latest_model,
-    ML_FEATURE_COLS,
-    TOT_FEATURE_COLS,
-)
 
 DB_PATH = os.getenv("WNBA_DB_PATH", str(_ROOT / "db" / "wnba.duckdb"))
 
@@ -151,6 +144,12 @@ def predict(
     under_odds: float = None,
     as_of: date = None,
 ) -> dict:
+    import duckdb
+    from model.stack_train import (
+        load_latest_model,
+        ML_FEATURE_COLS,
+        TOT_FEATURE_COLS,
+    )
     conn = duckdb.connect(DB_PATH)
     try:
         home_f = get_team_features(conn, home_team, as_of)
@@ -192,6 +191,8 @@ def predict(
         ml_model = ml_meta["model"]
         medians  = np.array(ml_meta["col_medians"], dtype=np.float32)
         X_ml_imp = np.where(np.isnan(X_ml), medians, X_ml)
+        # Orientation OK: --home is P(home win); model disagrees with market.
+        # predict_proba[:, 1] matches training target home_win. Do not invert.
         home_win_prob = float(ml_model.predict_proba(X_ml_imp)[0][1])
         away_win_prob = 1.0 - home_win_prob
 
@@ -267,7 +268,7 @@ def _fmt_edge(edge, odds) -> str:
 
 def main():
     p = argparse.ArgumentParser(description="WNBA single-game prediction")
-    p.add_argument("--home",        required=True, help="Home team name")
+    p.add_argument("--home",        required=True, help="Home team name (maps to P(home win), not favorite)")
     p.add_argument("--away",        required=True, help="Away team name")
     p.add_argument("--ml-home",     type=float,    help="Decimal odds: home win")
     p.add_argument("--ml-away",     type=float,    help="Decimal odds: away win")

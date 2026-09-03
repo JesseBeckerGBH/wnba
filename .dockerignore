@@ -1,0 +1,17 @@
+venv
+.venv
+__pycache__
+*.pyc
+*.pyo
+db/*.duckdb
+db/*.duckdb.wal
+.env
+.env.*
+!.env.example
+logs
+data/raw
+*.log
+.git
+mcp/node_modules
+mcp/dist
+node_modules

@@ -1,10 +1,13 @@
 .env
 .env.*
+!.env.example
 db/*.duckdb
 db/*.duckdb.wal
 data/raw/
 logs/
-model/artifacts/
+model/artifacts/*
+!model/artifacts/wnba_moneyline_v_20260617_172452_moneyline.pkl
+!model/artifacts/wnba_moneyline_v_20260617_172452_moneyline.json
 __pycache__/
 *.pyc
 *.pyo

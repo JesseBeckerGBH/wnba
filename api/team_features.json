@@ -1,0 +1,1417 @@
+{
+  "teams": {
+    "Atlanta Dream": {
+      "rolling_win_rate": 0.699999988079071,
+      "rolling_pts_for": 85.19999694824219,
+      "rolling_pts_against": 81.0,
+      "rolling_net_pts": 4.199999809265137,
+      "rolling_fg_pct": 0.4415999948978424,
+      "rolling_fg3_pct": 0.3411000072956085,
+      "rolling_ft_pct": 0.8655999898910522,
+      "rolling_tov_rate": null,
+      "rolling_reb_margin": 6.199999809265137,
+      "pace": 65.85600280761719,
+      "off_rating": 129.3070526123047,
+      "def_rating": 123.34902954101562,
+      "net_rating": 5.958030700683594,
+      "days_rest": 3.0,
+      "b2b": 0.0,
+      "elo_pre": 1608.7655029296875,
+      "sentiment_score": 0.0
+    },
+    "ATL": {
+      "rolling_win_rate": 0.699999988079071,
+      "rolling_pts_for": 85.19999694824219,
+      "rolling_pts_against": 81.0,
+      "rolling_net_pts": 4.199999809265137,
+      "rolling_fg_pct": 0.4415999948978424,
+      "rolling_fg3_pct": 0.3411000072956085,
+      "rolling_ft_pct": 0.8655999898910522,
+      "rolling_tov_rate": null,
+      "rolling_reb_margin": 6.199999809265137,
+      "pace": 65.85600280761719,
+      "off_rating": 129.3070526123047,
+      "def_rating": 123.34902954101562,
+      "net_rating": 5.958030700683594,
+      "days_rest": 3.0,
+      "b2b": 0.0,
+      "elo_pre": 1608.7655029296875,
+      "sentiment_score": 0.0
+    },
+    "Chicago Sky": {
+      "rolling_win_rate": 0.20000000298023224,
+      "rolling_pts_for": 79.5,
+      "rolling_pts_against": 88.0999984741211,
+      "rolling_net_pts": -8.600000381469727,
+      "rolling_fg_pct": 0.4140999913215637,
+      "rolling_fg3_pct": 0.29339998960494995,
+      "rolling_ft_pct": 0.7487999796867371,
+      "rolling_tov_rate": null,
+      "rolling_reb_margin": -10.0,
+      "pace": 70.60399627685547,
+      "off_rating": 112.686279296875,
+      "def_rating": 124.9798355102539,
+      "net_rating": -12.29355239868164,
+      "days_rest": 2.0,
+      "b2b": 0.0,
+      "elo_pre": 1338.894287109375,
+      "sentiment_score": 0.0
+    },
+    "CHI": {
+      "rolling_win_rate": 0.20000000298023224,
+      "rolling_pts_for": 79.5,
+      "rolling_pts_against": 88.0999984741211,
+      "rolling_net_pts": -8.600000381469727,
+      "rolling_fg_pct": 0.4140999913215637,
+      "rolling_fg3_pct": 0.29339998960494995,
+      "rolling_ft_pct": 0.7487999796867371,
+      "rolling_tov_rate": null,
+      "rolling_reb_margin": -10.0,
+      "pace": 70.60399627685547,
+      "off_rating": 112.686279296875,
+      "def_rating": 124.9798355102539,
+      "net_rating": -12.29355239868164,
+      "days_rest": 2.0,
+      "b2b": 0.0,
+      "elo_pre": 1338.894287109375,
+      "sentiment_score": 0.0
+    },
+    "Connecticut Sun": {
+      "rolling_win_rate": 0.20000000298023224,
+      "rolling_pts_for": 77.30000305175781,
+      "rolling_pts_against": 85.80000305175781,
+      "rolling_net_pts": -8.5,
+      "rolling_fg_pct": 0.4325999915599823,
+      "rolling_fg3_pct": 0.25369998812675476,
+      "rolling_ft_pct": 0.6467000246047974,
+      "rolling_tov_rate": null,
+      "rolling_reb_margin": 2.9000000953674316,
+      "pace": 65.447998046875,
+      "off_rating": 117.69813537597656,
+      "def_rating": 131.26942443847656,
+      "net_rating": -13.571297645568848,
+      "days_rest": 3.0,
+      "b2b": 0.0,
+      "elo_pre": 1371.803955078125,
+      "sentiment_score": 0.0
+    },
+    "CON": {
+      "rolling_win_rate": 0.20000000298023224,
+      "rolling_pts_for": 77.30000305175781,
+      "rolling_pts_against": 85.80000305175781,
+      "rolling_net_pts": -8.5,
+      "rolling_fg_pct": 0.4325999915599823,
+      "rolling_fg3_pct": 0.25369998812675476,
+      "rolling_ft_pct": 0.6467000246047974,
+      "rolling_tov_rate": null,
+      "rolling_reb_margin": 2.9000000953674316,
+      "pace": 65.447998046875,
+      "off_rating": 117.69813537597656,
+      "def_rating": 131.26942443847656,
+      "net_rating": -13.571297645568848,
+      "days_rest": 3.0,
+      "b2b": 0.0,
+      "elo_pre": 1371.803955078125,
+      "sentiment_score": 0.0
+    },
+    "Indiana Fever": {
+      "rolling_win_rate": 0.800000011920929,
+      "rolling_pts_for": 92.80000305175781,
+      "rolling_pts_against": 88.0,
+      "rolling_net_pts": 4.800000190734863,
+      "rolling_fg_pct": 0.48069998621940613,
+      "rolling_fg3_pct": 0.4004000127315521,
+      "rolling_ft_pct": 0.7509999871253967,
+      "rolling_tov_rate": null,
+      "rolling_reb_margin": 4.199999809265137,
+      "pace": 69.77200317382812,
+      "off_rating": 133.65708923339844,
+      "def_rating": 126.35491180419922,
+      "net_rating": 7.302182197570801,
+      "days_rest": 2.0,
+      "b2b": 0.0,
+      "elo_pre": 1689.8741455078125,
+      "sentiment_score": 0.0
+    },
+    "IND": {
+      "rolling_win_rate": 0.800000011920929,
+      "rolling_pts_for": 92.80000305175781,
+      "rolling_pts_against": 88.0,
+      "rolling_net_pts": 4.800000190734863,
+      "rolling_fg_pct": 0.48069998621940613,
+      "rolling_fg3_pct": 0.4004000127315521,
+      "rolling_ft_pct": 0.7509999871253967,
+      "rolling_tov_rate": null,
+      "rolling_reb_margin": 4.199999809265137,
+      "pace": 69.77200317382812,
+      "off_rating": 133.65708923339844,
+      "def_rating": 126.35491180419922,
+      "net_rating": 7.302182197570801,
+      "days_rest": 2.0,
+      "b2b": 0.0,
+      "elo_pre": 1689.8741455078125,
+      "sentiment_score": 0.0
+    },
+    "New York Liberty": {
+      "rolling_win_rate": 0.800000011920929,
+      "rolling_pts_for": 92.19999694824219,
+      "rolling_pts_against": 77.69999694824219,
+      "rolling_net_pts": 14.5,
+      "rolling_fg_pct": 0.49490001797676086,
+      "rolling_fg3_pct": 0.3952000141143799,
+      "rolling_ft_pct": 0.8302000164985657,
+      "rolling_tov_rate": null,
+      "rolling_reb_margin": 7.400000095367432,
+      "pace": 68.85199737548828,
+      "off_rating": 134.423095703125,
+      "def_rating": 113.05730438232422,
+      "net_rating": 21.365798950195312,
+      "days_rest": 2.0,
+      "b2b": 0.0,
+      "elo_pre": 1671.59375,
+      "sentiment_score": 0.0
+    },
+    "NYL": {
+      "rolling_win_rate": 0.800000011920929,
+      "rolling_pts_for": 92.19999694824219,
+      "rolling_pts_against": 77.69999694824219,
+      "rolling_net_pts": 14.5,
+      "rolling_fg_pct": 0.49490001797676086,
+      "rolling_fg3_pct": 0.3952000141143799,
+      "rolling_ft_pct": 0.8302000164985657,
+      "rolling_tov_rate": null,
+      "rolling_reb_margin": 7.400000095367432,
+      "pace": 68.85199737548828,
+      "off_rating": 134.423095703125,
+      "def_rating": 113.05730438232422,
+      "net_rating": 21.365798950195312,
+      "days_rest": 2.0,
+      "b2b": 0.0,
+      "elo_pre": 1671.59375,
+      "sentiment_score": 0.0
+    },
+    "Washington Mystics": {
+      "rolling_win_rate": 0.6000000238418579,
+      "rolling_pts_for": 92.0,
+      "rolling_pts_against": 90.0,
+      "rolling_net_pts": 2.0,
+      "rolling_fg_pct": 0.460099995136261,
+      "rolling_fg3_pct": 0.3422999978065491,
+      "rolling_ft_pct": 0.8036999702453613,
+      "rolling_tov_rate": null,
+      "rolling_reb_margin": -2.4000000953674316,
+      "pace": 69.91600036621094,
+      "off_rating": 131.54026794433594,
+      "def_rating": 128.886962890625,
+      "net_rating": 2.653316020965576,
+      "days_rest": 2.0,
+      "b2b": 0.0,
+      "elo_pre": 1480.978271484375,
+      "sentiment_score": 0.0
+    },
+    "WAS": {
+      "rolling_win_rate": 0.6000000238418579,
+      "rolling_pts_for": 92.0,
+      "rolling_pts_against": 90.0,
+      "rolling_net_pts": 2.0,
+      "rolling_fg_pct": 0.460099995136261,
+      "rolling_fg3_pct": 0.3422999978065491,
+      "rolling_ft_pct": 0.8036999702453613,
+      "rolling_tov_rate": null,
+      "rolling_reb_margin": -2.4000000953674316,
+      "pace": 69.91600036621094,
+      "off_rating": 131.54026794433594,
+      "def_rating": 128.886962890625,
+      "net_rating": 2.653316020965576,
+      "days_rest": 2.0,
+      "b2b": 0.0,
+      "elo_pre": 1480.978271484375,
+      "sentiment_score": 0.0
+    },
+    "Dallas Wings": {
+      "rolling_win_rate": 0.6000000238418579,
+      "rolling_pts_for": 86.19999694824219,
+      "rolling_pts_against": 81.0,
+      "rolling_net_pts": 5.199999809265137,
+      "rolling_fg_pct": 0.44279998540878296,
+      "rolling_fg3_pct": 0.33809998631477356,
+      "rolling_ft_pct": 0.7511000037193298,
+      "rolling_tov_rate": null,
+      "rolling_reb_margin": 4.0,
+      "pace": 67.9520034790039,
+      "off_rating": 127.4771957397461,
+      "def_rating": 119.29693603515625,
+      "net_rating": 8.180259704589844,
+      "days_rest": 3.0,
+      "b2b": 0.0,
+      "elo_pre": 1596.6490478515625,
+      "sentiment_score": 0.0
+    },
+    "DAL": {
+      "rolling_win_rate": 0.6000000238418579,
+      "rolling_pts_for": 86.19999694824219,
+      "rolling_pts_against": 81.0,
+      "rolling_net_pts": 5.199999809265137,
+      "rolling_fg_pct": 0.44279998540878296,
+      "rolling_fg3_pct": 0.33809998631477356,
+      "rolling_ft_pct": 0.7511000037193298,
+      "rolling_tov_rate": null,
+      "rolling_reb_margin": 4.0,
+      "pace": 67.9520034790039,
+      "off_rating": 127.4771957397461,
+      "def_rating": 119.29693603515625,
+      "net_rating": 8.180259704589844,
+      "days_rest": 3.0,
+      "b2b": 0.0,
+      "elo_pre": 1596.6490478515625,
+      "sentiment_score": 0.0
+    },
+    "Golden State Valkyries": {
+      "rolling_win_rate": 0.699999988079071,
+      "rolling_pts_for": 87.5999984741211,
+      "rolling_pts_against": 83.4000015258789,
+      "rolling_net_pts": 4.199999809265137,
+      "rolling_fg_pct": 0.4458000063896179,
+      "rolling_fg3_pct": 0.3260999917984009,
+      "rolling_ft_pct": 0.8144999742507935,
+      "rolling_tov_rate": null,
+      "rolling_reb_margin": 4.599999904632568,
+      "pace": 69.12000274658203,
+      "off_rating": 126.84589385986328,
+      "def_rating": 120.73678588867188,
+      "net_rating": 6.1091108322143555,
+      "days_rest": 3.0,
+      "b2b": 0.0,
+      "elo_pre": 1525.74365234375,
+      "sentiment_score": 0.0
+    },
+    "GSV": {
+      "rolling_win_rate": 0.699999988079071,
+      "rolling_pts_for": 87.5999984741211,
+      "rolling_pts_against": 83.4000015258789,
+      "rolling_net_pts": 4.199999809265137,
+      "rolling_fg_pct": 0.4458000063896179,
+      "rolling_fg3_pct": 0.3260999917984009,
+      "rolling_ft_pct": 0.8144999742507935,
+      "rolling_tov_rate": null,
+      "rolling_reb_margin": 4.599999904632568,
+      "pace": 69.12000274658203,
+      "off_rating": 126.84589385986328,
+      "def_rating": 120.73678588867188,
+      "net_rating": 6.1091108322143555,
+      "days_rest": 3.0,
+      "b2b": 0.0,
+      "elo_pre": 1525.74365234375,
+      "sentiment_score": 0.0
+    },
+    "Las Vegas Aces": {
+      "rolling_win_rate": 0.699999988079071,
+      "rolling_pts_for": 87.30000305175781,
+      "rolling_pts_against": 81.30000305175781,
+      "rolling_net_pts": 6.0,
+      "rolling_fg_pct": 0.44839999079704285,
+      "rolling_fg3_pct": 0.3379000127315521,
+      "rolling_ft_pct": 0.7771999835968018,
+      "rolling_tov_rate": null,
+      "rolling_reb_margin": 3.0999999046325684,
+      "pace": 70.47599792480469,
+      "off_rating": 124.12435913085938,
+      "def_rating": 115.30451202392578,
+      "net_rating": 8.819844245910645,
+      "days_rest": 2.0,
+      "b2b": 0.0,
+      "elo_pre": 1407.4031982421875,
+      "sentiment_score": 0.0
+    },
+    "LVA": {
+      "rolling_win_rate": 0.699999988079071,
+      "rolling_pts_for": 87.30000305175781,
+      "rolling_pts_against": 81.30000305175781,
+      "rolling_net_pts": 6.0,
+      "rolling_fg_pct": 0.44839999079704285,
+      "rolling_fg3_pct": 0.3379000127315521,
+      "rolling_ft_pct": 0.7771999835968018,
+      "rolling_tov_rate": null,
+      "rolling_reb_margin": 3.0999999046325684,
+      "pace": 70.47599792480469,
+      "off_rating": 124.12435913085938,
+      "def_rating": 115.30451202392578,
+      "net_rating": 8.819844245910645,
+      "days_rest": 2.0,
+      "b2b": 0.0,
+      "elo_pre": 1407.4031982421875,
+      "sentiment_score": 0.0
+    },
+    "Los Angeles Sparks": {
+      "rolling_win_rate": 0.20000000298023224,
+      "rolling_pts_for": 75.4000015258789,
+      "rolling_pts_against": 82.30000305175781,
+      "rolling_net_pts": -6.900000095367432,
+      "rolling_fg_pct": 0.40380001068115234,
+      "rolling_fg3_pct": 0.3125999867916107,
+      "rolling_ft_pct": 0.8111000061035156,
+      "rolling_tov_rate": null,
+      "rolling_reb_margin": -5.800000190734863,
+      "pace": 66.06800079345703,
+      "off_rating": 113.87484741210938,
+      "def_rating": 124.78113555908203,
+      "net_rating": -10.906286239624023,
+      "days_rest": 2.0,
+      "b2b": 0.0,
+      "elo_pre": 1426.9810791015625,
+      "sentiment_score": 0.0
+    },
+    "LAS": {
+      "rolling_win_rate": 0.20000000298023224,
+      "rolling_pts_for": 75.4000015258789,
+      "rolling_pts_against": 82.30000305175781,
+      "rolling_net_pts": -6.900000095367432,
+      "rolling_fg_pct": 0.40380001068115234,
+      "rolling_fg3_pct": 0.3125999867916107,
+      "rolling_ft_pct": 0.8111000061035156,
+      "rolling_tov_rate": null,
+      "rolling_reb_margin": -5.800000190734863,
+      "pace": 66.06800079345703,
+      "off_rating": 113.87484741210938,
+      "def_rating": 124.78113555908203,
+      "net_rating": -10.906286239624023,
+      "days_rest": 2.0,
+      "b2b": 0.0,
+      "elo_pre": 1426.9810791015625,
+      "sentiment_score": 0.0
+    },
+    "Minnesota Lynx": {
+      "rolling_win_rate": null,
+      "rolling_pts_for": null,
+      "rolling_pts_against": null,
+      "rolling_net_pts": null,
+      "rolling_fg_pct": null,
+      "rolling_fg3_pct": null,
+      "rolling_ft_pct": null,
+      "rolling_tov_rate": null,
+      "rolling_reb_margin": null,
+      "pace": null,
+      "off_rating": null,
+      "def_rating": null,
+      "net_rating": null,
+      "days_rest": 5.0,
+      "b2b": 0.0,
+      "elo_pre": 1500.0,
+      "sentiment_score": 0.0
+    },
+    "MIN": {
+      "rolling_win_rate": null,
+      "rolling_pts_for": null,
+      "rolling_pts_against": null,
+      "rolling_net_pts": null,
+      "rolling_fg_pct": null,
+      "rolling_fg3_pct": null,
+      "rolling_ft_pct": null,
+      "rolling_tov_rate": null,
+      "rolling_reb_margin": null,
+      "pace": null,
+      "off_rating": null,
+      "def_rating": null,
+      "net_rating": null,
+      "days_rest": 5.0,
+      "b2b": 0.0,
+      "elo_pre": 1500.0,
+      "sentiment_score": 0.0
+    },
+    "Phoenix Mercury": {
+      "rolling_win_rate": 0.4000000059604645,
+      "rolling_pts_for": 84.5,
+      "rolling_pts_against": 88.9000015258789,
+      "rolling_net_pts": -4.400000095367432,
+      "rolling_fg_pct": 0.4604000151157379,
+      "rolling_fg3_pct": 0.3021000027656555,
+      "rolling_ft_pct": 0.767799973487854,
+      "rolling_tov_rate": null,
+      "rolling_reb_margin": 5.099999904632568,
+      "pace": 65.46800231933594,
+      "off_rating": 128.9298858642578,
+      "def_rating": 136.3630828857422,
+      "net_rating": -7.433193683624268,
+      "days_rest": 2.0,
+      "b2b": 0.0,
+      "elo_pre": 1404.580322265625,
+      "sentiment_score": 0.0
+    },
+    "PHX": {
+      "rolling_win_rate": 0.4000000059604645,
+      "rolling_pts_for": 84.5,
+      "rolling_pts_against": 88.9000015258789,
+      "rolling_net_pts": -4.400000095367432,
+      "rolling_fg_pct": 0.4604000151157379,
+      "rolling_fg3_pct": 0.3021000027656555,
+      "rolling_ft_pct": 0.767799973487854,
+      "rolling_tov_rate": null,
+      "rolling_reb_margin": 5.099999904632568,
+      "pace": 65.46800231933594,
+      "off_rating": 128.9298858642578,
+      "def_rating": 136.3630828857422,
+      "net_rating": -7.433193683624268,
+      "days_rest": 2.0,
+      "b2b": 0.0,
+      "elo_pre": 1404.580322265625,
+      "sentiment_score": 0.0
+    },
+    "Seattle Storm": {
+      "rolling_win_rate": 0.5,
+      "rolling_pts_for": 81.0999984741211,
+      "rolling_pts_against": 83.5,
+      "rolling_net_pts": -2.4000000953674316,
+      "rolling_fg_pct": 0.4546000063419342,
+      "rolling_fg3_pct": 0.34929999709129333,
+      "rolling_ft_pct": 0.7928999662399292,
+      "rolling_tov_rate": null,
+      "rolling_reb_margin": -3.200000047683716,
+      "pace": 64.8479995727539,
+      "off_rating": 125.1265869140625,
+      "def_rating": 129.7749481201172,
+      "net_rating": -4.648354530334473,
+      "days_rest": 2.0,
+      "b2b": 0.0,
+      "elo_pre": 1491.6600341796875,
+      "sentiment_score": 0.0
+    },
+    "SEA": {
+      "rolling_win_rate": 0.5,
+      "rolling_pts_for": 81.0999984741211,
+      "rolling_pts_against": 83.5,
+      "rolling_net_pts": -2.4000000953674316,
+      "rolling_fg_pct": 0.4546000063419342,
+      "rolling_fg3_pct": 0.34929999709129333,
+      "rolling_ft_pct": 0.7928999662399292,
+      "rolling_tov_rate": null,
+      "rolling_reb_margin": -3.200000047683716,
+      "pace": 64.8479995727539,
+      "off_rating": 125.1265869140625,
+      "def_rating": 129.7749481201172,
+      "net_rating": -4.648354530334473,
+      "days_rest": 2.0,
+      "b2b": 0.0,
+      "elo_pre": 1491.6600341796875,
+      "sentiment_score": 0.0
+    },
+    "Toronto Tempo": {
+      "rolling_win_rate": null,
+      "rolling_pts_for": null,
+      "rolling_pts_against": null,
+      "rolling_net_pts": null,
+      "rolling_fg_pct": null,
+      "rolling_fg3_pct": null,
+      "rolling_ft_pct": null,
+      "rolling_tov_rate": null,
+      "rolling_reb_margin": null,
+      "pace": null,
+      "off_rating": null,
+      "def_rating": null,
+      "net_rating": null,
+      "days_rest": 5.0,
+      "b2b": 0.0,
+      "elo_pre": 1500.0,
+      "sentiment_score": 0.0
+    },
+    "TOR": {
+      "rolling_win_rate": null,
+      "rolling_pts_for": null,
+      "rolling_pts_against": null,
+      "rolling_net_pts": null,
+      "rolling_fg_pct": null,
+      "rolling_fg3_pct": null,
+      "rolling_ft_pct": null,
+      "rolling_tov_rate": null,
+      "rolling_reb_margin": null,
+      "pace": null,
+      "off_rating": null,
+      "def_rating": null,
+      "net_rating": null,
+      "days_rest": 5.0,
+      "b2b": 0.0,
+      "elo_pre": 1500.0,
+      "sentiment_score": 0.0
+    },
+    "Portland Fire": {
+      "rolling_win_rate": null,
+      "rolling_pts_for": null,
+      "rolling_pts_against": null,
+      "rolling_net_pts": null,
+      "rolling_fg_pct": null,
+      "rolling_fg3_pct": null,
+      "rolling_ft_pct": null,
+      "rolling_tov_rate": null,
+      "rolling_reb_margin": null,
+      "pace": null,
+      "off_rating": null,
+      "def_rating": null,
+      "net_rating": null,
+      "days_rest": 5.0,
+      "b2b": 0.0,
+      "elo_pre": 1500.0,
+      "sentiment_score": 0.0
+    },
+    "POR": {
+      "rolling_win_rate": null,
+      "rolling_pts_for": null,
+      "rolling_pts_against": null,
+      "rolling_net_pts": null,
+      "rolling_fg_pct": null,
+      "rolling_fg3_pct": null,
+      "rolling_ft_pct": null,
+      "rolling_tov_rate": null,
+      "rolling_reb_margin": null,
+      "pace": null,
+      "off_rating": null,
+      "def_rating": null,
+      "net_rating": null,
+      "days_rest": 5.0,
+      "b2b": 0.0,
+      "elo_pre": 1500.0,
+      "sentiment_score": 0.0
+    }
+  },
+  "h2h": {
+    "Atlanta Dream||Chicago Sky": [
+      0.5,
+      2
+    ],
+    "Atlanta Dream||Connecticut Sun": [
+      1.0,
+      3
+    ],
+    "Atlanta Dream||Indiana Fever": [
+      1.0,
+      3
+    ],
+    "Atlanta Dream||New York Liberty": [
+      0.3333333333333333,
+      3
+    ],
+    "Atlanta Dream||Washington Mystics": [
+      0.5,
+      2
+    ],
+    "Atlanta Dream||Dallas Wings": [
+      0.6666666666666666,
+      3
+    ],
+    "Atlanta Dream||Golden State Valkyries": [
+      1.0,
+      3
+    ],
+    "Atlanta Dream||Las Vegas Aces": [
+      0.5,
+      2
+    ],
+    "Atlanta Dream||Los Angeles Sparks": [
+      0.5,
+      2
+    ],
+    "Atlanta Dream||Minnesota Lynx": [
+      0.5,
+      0
+    ],
+    "Atlanta Dream||Phoenix Mercury": [
+      1.0,
+      3
+    ],
+    "Atlanta Dream||Seattle Storm": [
+      0.0,
+      1
+    ],
+    "Atlanta Dream||Toronto Tempo": [
+      0.5,
+      0
+    ],
+    "Atlanta Dream||Portland Fire": [
+      0.5,
+      0
+    ],
+    "Chicago Sky||Atlanta Dream": [
+      0.0,
+      2
+    ],
+    "Chicago Sky||Connecticut Sun": [
+      0.6666666666666666,
+      3
+    ],
+    "Chicago Sky||Indiana Fever": [
+      0.0,
+      1
+    ],
+    "Chicago Sky||New York Liberty": [
+      0.25,
+      4
+    ],
+    "Chicago Sky||Washington Mystics": [
+      1.0,
+      2
+    ],
+    "Chicago Sky||Dallas Wings": [
+      0.0,
+      3
+    ],
+    "Chicago Sky||Golden State Valkyries": [
+      0.0,
+      2
+    ],
+    "Chicago Sky||Las Vegas Aces": [
+      0.75,
+      4
+    ],
+    "Chicago Sky||Los Angeles Sparks": [
+      0.0,
+      2
+    ],
+    "Chicago Sky||Minnesota Lynx": [
+      0.5,
+      0
+    ],
+    "Chicago Sky||Phoenix Mercury": [
+      0.3333333333333333,
+      3
+    ],
+    "Chicago Sky||Seattle Storm": [
+      0.5,
+      0
+    ],
+    "Chicago Sky||Toronto Tempo": [
+      0.5,
+      0
+    ],
+    "Chicago Sky||Portland Fire": [
+      0.5,
+      0
+    ],
+    "Connecticut Sun||Atlanta Dream": [
+      0.3333333333333333,
+      3
+    ],
+    "Connecticut Sun||Chicago Sky": [
+      0.6666666666666666,
+      3
+    ],
+    "Connecticut Sun||Indiana Fever": [
+      0.0,
+      5
+    ],
+    "Connecticut Sun||New York Liberty": [
+      0.0,
+      2
+    ],
+    "Connecticut Sun||Washington Mystics": [
+      0.5,
+      2
+    ],
+    "Connecticut Sun||Dallas Wings": [
+      0.3333333333333333,
+      3
+    ],
+    "Connecticut Sun||Golden State Valkyries": [
+      0.0,
+      3
+    ],
+    "Connecticut Sun||Las Vegas Aces": [
+      0.0,
+      2
+    ],
+    "Connecticut Sun||Los Angeles Sparks": [
+      0.25,
+      4
+    ],
+    "Connecticut Sun||Minnesota Lynx": [
+      0.5,
+      0
+    ],
+    "Connecticut Sun||Phoenix Mercury": [
+      0.5,
+      2
+    ],
+    "Connecticut Sun||Seattle Storm": [
+      0.5,
+      0
+    ],
+    "Connecticut Sun||Toronto Tempo": [
+      0.5,
+      0
+    ],
+    "Connecticut Sun||Portland Fire": [
+      0.5,
+      0
+    ],
+    "Indiana Fever||Atlanta Dream": [
+      1.0,
+      1
+    ],
+    "Indiana Fever||Chicago Sky": [
+      1.0,
+      3
+    ],
+    "Indiana Fever||Connecticut Sun": [
+      1.0,
+      3
+    ],
+    "Indiana Fever||New York Liberty": [
+      0.6666666666666666,
+      3
+    ],
+    "Indiana Fever||Washington Mystics": [
+      0.3333333333333333,
+      3
+    ],
+    "Indiana Fever||Dallas Wings": [
+      1.0,
+      2
+    ],
+    "Indiana Fever||Golden State Valkyries": [
+      1.0,
+      1
+    ],
+    "Indiana Fever||Las Vegas Aces": [
+      1.0,
+      3
+    ],
+    "Indiana Fever||Los Angeles Sparks": [
+      0.6666666666666666,
+      3
+    ],
+    "Indiana Fever||Minnesota Lynx": [
+      0.5,
+      0
+    ],
+    "Indiana Fever||Phoenix Mercury": [
+      0.5,
+      2
+    ],
+    "Indiana Fever||Seattle Storm": [
+      0.5,
+      0
+    ],
+    "Indiana Fever||Toronto Tempo": [
+      0.5,
+      0
+    ],
+    "Indiana Fever||Portland Fire": [
+      0.5,
+      0
+    ],
+    "New York Liberty||Atlanta Dream": [
+      1.0,
+      2
+    ],
+    "New York Liberty||Chicago Sky": [
+      0.75,
+      4
+    ],
+    "New York Liberty||Connecticut Sun": [
+      1.0,
+      2
+    ],
+    "New York Liberty||Indiana Fever": [
+      1.0,
+      2
+    ],
+    "New York Liberty||Washington Mystics": [
+      0.6666666666666666,
+      3
+    ],
+    "New York Liberty||Dallas Wings": [
+      0.3333333333333333,
+      3
+    ],
+    "New York Liberty||Golden State Valkyries": [
+      1.0,
+      1
+    ],
+    "New York Liberty||Las Vegas Aces": [
+      1.0,
+      3
+    ],
+    "New York Liberty||Los Angeles Sparks": [
+      0.6666666666666666,
+      3
+    ],
+    "New York Liberty||Minnesota Lynx": [
+      0.5,
+      0
+    ],
+    "New York Liberty||Phoenix Mercury": [
+      1.0,
+      2
+    ],
+    "New York Liberty||Seattle Storm": [
+      1.0,
+      1
+    ],
+    "New York Liberty||Toronto Tempo": [
+      0.5,
+      0
+    ],
+    "New York Liberty||Portland Fire": [
+      0.5,
+      0
+    ],
+    "Washington Mystics||Atlanta Dream": [
+      0.0,
+      1
+    ],
+    "Washington Mystics||Chicago Sky": [
+      0.5,
+      2
+    ],
+    "Washington Mystics||Connecticut Sun": [
+      0.5,
+      4
+    ],
+    "Washington Mystics||Indiana Fever": [
+      0.0,
+      4
+    ],
+    "Washington Mystics||New York Liberty": [
+      0.0,
+      2
+    ],
+    "Washington Mystics||Dallas Wings": [
+      0.0,
+      1
+    ],
+    "Washington Mystics||Golden State Valkyries": [
+      0.3333333333333333,
+      3
+    ],
+    "Washington Mystics||Las Vegas Aces": [
+      0.6666666666666666,
+      3
+    ],
+    "Washington Mystics||Los Angeles Sparks": [
+      0.3333333333333333,
+      3
+    ],
+    "Washington Mystics||Minnesota Lynx": [
+      0.5,
+      0
+    ],
+    "Washington Mystics||Phoenix Mercury": [
+      1.0,
+      2
+    ],
+    "Washington Mystics||Seattle Storm": [
+      1.0,
+      1
+    ],
+    "Washington Mystics||Toronto Tempo": [
+      0.5,
+      0
+    ],
+    "Washington Mystics||Portland Fire": [
+      0.5,
+      0
+    ],
+    "Dallas Wings||Atlanta Dream": [
+      0.6666666666666666,
+      3
+    ],
+    "Dallas Wings||Chicago Sky": [
+      1.0,
+      3
+    ],
+    "Dallas Wings||Connecticut Sun": [
+      1.0,
+      3
+    ],
+    "Dallas Wings||Indiana Fever": [
+      0.0,
+      2
+    ],
+    "Dallas Wings||New York Liberty": [
+      0.3333333333333333,
+      3
+    ],
+    "Dallas Wings||Washington Mystics": [
+      1.0,
+      2
+    ],
+    "Dallas Wings||Golden State Valkyries": [
+      0.5,
+      2
+    ],
+    "Dallas Wings||Las Vegas Aces": [
+      1.0,
+      4
+    ],
+    "Dallas Wings||Los Angeles Sparks": [
+      0.0,
+      2
+    ],
+    "Dallas Wings||Minnesota Lynx": [
+      0.5,
+      0
+    ],
+    "Dallas Wings||Phoenix Mercury": [
+      0.75,
+      4
+    ],
+    "Dallas Wings||Seattle Storm": [
+      0.5,
+      0
+    ],
+    "Dallas Wings||Toronto Tempo": [
+      0.5,
+      0
+    ],
+    "Dallas Wings||Portland Fire": [
+      0.5,
+      0
+    ],
+    "Golden State Valkyries||Atlanta Dream": [
+      0.5,
+      2
+    ],
+    "Golden State Valkyries||Chicago Sky": [
+      1.0,
+      4
+    ],
+    "Golden State Valkyries||Connecticut Sun": [
+      0.5,
+      2
+    ],
+    "Golden State Valkyries||Indiana Fever": [
+      0.5,
+      4
+    ],
+    "Golden State Valkyries||New York Liberty": [
+      0.3333333333333333,
+      3
+    ],
+    "Golden State Valkyries||Washington Mystics": [
+      0.3333333333333333,
+      3
+    ],
+    "Golden State Valkyries||Dallas Wings": [
+      0.75,
+      4
+    ],
+    "Golden State Valkyries||Las Vegas Aces": [
+      0.5,
+      4
+    ],
+    "Golden State Valkyries||Los Angeles Sparks": [
+      1.0,
+      2
+    ],
+    "Golden State Valkyries||Minnesota Lynx": [
+      0.5,
+      0
+    ],
+    "Golden State Valkyries||Phoenix Mercury": [
+      0.3333333333333333,
+      3
+    ],
+    "Golden State Valkyries||Seattle Storm": [
+      1.0,
+      1
+    ],
+    "Golden State Valkyries||Toronto Tempo": [
+      0.5,
+      0
+    ],
+    "Golden State Valkyries||Portland Fire": [
+      0.5,
+      0
+    ],
+    "Las Vegas Aces||Atlanta Dream": [
+      0.25,
+      4
+    ],
+    "Las Vegas Aces||Chicago Sky": [
+      0.0,
+      1
+    ],
+    "Las Vegas Aces||Connecticut Sun": [
+      0.0,
+      1
+    ],
+    "Las Vegas Aces||Indiana Fever": [
+      0.5,
+      4
+    ],
+    "Las Vegas Aces||New York Liberty": [
+      0.0,
+      3
+    ],
+    "Las Vegas Aces||Washington Mystics": [
+      0.0,
+      2
+    ],
+    "Las Vegas Aces||Dallas Wings": [
+      0.3333333333333333,
+      3
+    ],
+    "Las Vegas Aces||Golden State Valkyries": [
+      0.0,
+      2
+    ],
+    "Las Vegas Aces||Los Angeles Sparks": [
+      0.25,
+      4
+    ],
+    "Las Vegas Aces||Minnesota Lynx": [
+      0.5,
+      0
+    ],
+    "Las Vegas Aces||Phoenix Mercury": [
+      0.5,
+      4
+    ],
+    "Las Vegas Aces||Seattle Storm": [
+      0.5,
+      0
+    ],
+    "Las Vegas Aces||Toronto Tempo": [
+      0.5,
+      0
+    ],
+    "Las Vegas Aces||Portland Fire": [
+      0.5,
+      0
+    ],
+    "Los Angeles Sparks||Atlanta Dream": [
+      0.5,
+      2
+    ],
+    "Los Angeles Sparks||Chicago Sky": [
+      1.0,
+      1
+    ],
+    "Los Angeles Sparks||Connecticut Sun": [
+      0.75,
+      4
+    ],
+    "Los Angeles Sparks||Indiana Fever": [
+      0.3333333333333333,
+      3
+    ],
+    "Los Angeles Sparks||New York Liberty": [
+      0.5,
+      2
+    ],
+    "Los Angeles Sparks||Washington Mystics": [
+      0.25,
+      4
+    ],
+    "Los Angeles Sparks||Dallas Wings": [
+      0.0,
+      2
+    ],
+    "Los Angeles Sparks||Golden State Valkyries": [
+      0.0,
+      2
+    ],
+    "Los Angeles Sparks||Las Vegas Aces": [
+      0.5,
+      2
+    ],
+    "Los Angeles Sparks||Minnesota Lynx": [
+      0.5,
+      0
+    ],
+    "Los Angeles Sparks||Phoenix Mercury": [
+      0.3333333333333333,
+      3
+    ],
+    "Los Angeles Sparks||Seattle Storm": [
+      0.5,
+      0
+    ],
+    "Los Angeles Sparks||Toronto Tempo": [
+      0.5,
+      0
+    ],
+    "Los Angeles Sparks||Portland Fire": [
+      0.5,
+      0
+    ],
+    "Minnesota Lynx||Atlanta Dream": [
+      0.5,
+      0
+    ],
+    "Minnesota Lynx||Chicago Sky": [
+      0.5,
+      0
+    ],
+    "Minnesota Lynx||Connecticut Sun": [
+      0.5,
+      0
+    ],
+    "Minnesota Lynx||Indiana Fever": [
+      0.5,
+      0
+    ],
+    "Minnesota Lynx||New York Liberty": [
+      0.5,
+      0
+    ],
+    "Minnesota Lynx||Washington Mystics": [
+      0.5,
+      0
+    ],
+    "Minnesota Lynx||Dallas Wings": [
+      0.5,
+      0
+    ],
+    "Minnesota Lynx||Golden State Valkyries": [
+      0.5,
+      0
+    ],
+    "Minnesota Lynx||Las Vegas Aces": [
+      0.5,
+      0
+    ],
+    "Minnesota Lynx||Los Angeles Sparks": [
+      0.5,
+      0
+    ],
+    "Minnesota Lynx||Phoenix Mercury": [
+      0.5,
+      0
+    ],
+    "Minnesota Lynx||Seattle Storm": [
+      0.5,
+      0
+    ],
+    "Minnesota Lynx||Toronto Tempo": [
+      0.5,
+      0
+    ],
+    "Minnesota Lynx||Portland Fire": [
+      0.5,
+      0
+    ],
+    "Phoenix Mercury||Atlanta Dream": [
+      0.0,
+      4
+    ],
+    "Phoenix Mercury||Chicago Sky": [
+      1.0,
+      3
+    ],
+    "Phoenix Mercury||Connecticut Sun": [
+      0.5,
+      2
+    ],
+    "Phoenix Mercury||Indiana Fever": [
+      0.5,
+      2
+    ],
+    "Phoenix Mercury||New York Liberty": [
+      0.5,
+      2
+    ],
+    "Phoenix Mercury||Washington Mystics": [
+      0.3333333333333333,
+      3
+    ],
+    "Phoenix Mercury||Dallas Wings": [
+      0.3333333333333333,
+      3
+    ],
+    "Phoenix Mercury||Golden State Valkyries": [
+      0.5,
+      4
+    ],
+    "Phoenix Mercury||Las Vegas Aces": [
+      1.0,
+      1
+    ],
+    "Phoenix Mercury||Los Angeles Sparks": [
+      0.5,
+      2
+    ],
+    "Phoenix Mercury||Minnesota Lynx": [
+      0.5,
+      0
+    ],
+    "Phoenix Mercury||Seattle Storm": [
+      0.5,
+      0
+    ],
+    "Phoenix Mercury||Toronto Tempo": [
+      0.5,
+      0
+    ],
+    "Phoenix Mercury||Portland Fire": [
+      0.5,
+      0
+    ],
+    "Seattle Storm||Atlanta Dream": [
+      0.5,
+      2
+    ],
+    "Seattle Storm||Chicago Sky": [
+      0.0,
+      1
+    ],
+    "Seattle Storm||Connecticut Sun": [
+      1.0,
+      2
+    ],
+    "Seattle Storm||Indiana Fever": [
+      0.0,
+      1
+    ],
+    "Seattle Storm||New York Liberty": [
+      0.5,
+      0
+    ],
+    "Seattle Storm||Washington Mystics": [
+      0.5,
+      0
+    ],
+    "Seattle Storm||Dallas Wings": [
+      0.0,
+      1
+    ],
+    "Seattle Storm||Golden State Valkyries": [
+      1.0,
+      1
+    ],
+    "Seattle Storm||Las Vegas Aces": [
+      1.0,
+      1
+    ],
+    "Seattle Storm||Los Angeles Sparks": [
+      0.5,
+      0
+    ],
+    "Seattle Storm||Minnesota Lynx": [
+      0.5,
+      0
+    ],
+    "Seattle Storm||Phoenix Mercury": [
+      0.5,
+      0
+    ],
+    "Seattle Storm||Toronto Tempo": [
+      0.5,
+      0
+    ],
+    "Seattle Storm||Portland Fire": [
+      0.5,
+      0
+    ],
+    "Toronto Tempo||Atlanta Dream": [
+      0.5,
+      0
+    ],
+    "Toronto Tempo||Chicago Sky": [
+      0.5,
+      0
+    ],
+    "Toronto Tempo||Connecticut Sun": [
+      0.5,
+      0
+    ],
+    "Toronto Tempo||Indiana Fever": [
+      0.5,
+      0
+    ],
+    "Toronto Tempo||New York Liberty": [
+      0.5,
+      0
+    ],
+    "Toronto Tempo||Washington Mystics": [
+      0.5,
+      0
+    ],
+    "Toronto Tempo||Dallas Wings": [
+      0.5,
+      0
+    ],
+    "Toronto Tempo||Golden State Valkyries": [
+      0.5,
+      0
+    ],
+    "Toronto Tempo||Las Vegas Aces": [
+      0.5,
+      0
+    ],
+    "Toronto Tempo||Los Angeles Sparks": [
+      0.5,
+      0
+    ],
+    "Toronto Tempo||Minnesota Lynx": [
+      0.5,
+      0
+    ],
+    "Toronto Tempo||Phoenix Mercury": [
+      0.5,
+      0
+    ],
+    "Toronto Tempo||Seattle Storm": [
+      0.5,
+      0
+    ],
+    "Toronto Tempo||Portland Fire": [
+      0.5,
+      0
+    ],
+    "Portland Fire||Atlanta Dream": [
+      0.5,
+      0
+    ],
+    "Portland Fire||Chicago Sky": [
+      0.5,
+      0
+    ],
+    "Portland Fire||Connecticut Sun": [
+      0.5,
+      0
+    ],
+    "Portland Fire||Indiana Fever": [
+      0.5,
+      0
+    ],
+    "Portland Fire||New York Liberty": [
+      0.5,
+      0
+    ],
+    "Portland Fire||Washington Mystics": [
+      0.5,
+      0
+    ],
+    "Portland Fire||Dallas Wings": [
+      0.5,
+      0
+    ],
+    "Portland Fire||Golden State Valkyries": [
+      0.5,
+      0
+    ],
+    "Portland Fire||Las Vegas Aces": [
+      0.5,
+      0
+    ],
+    "Portland Fire||Los Angeles Sparks": [
+      0.5,
+      0
+    ],
+    "Portland Fire||Minnesota Lynx": [
+      0.5,
+      0
+    ],
+    "Portland Fire||Phoenix Mercury": [
+      0.5,
+      0
+    ],
+    "Portland Fire||Seattle Storm": [
+      0.5,
+      0
+    ],
+    "Portland Fire||Toronto Tempo": [
+      0.5,
+      0
+    ]
+  },
+  "source_db": "D:\\WNBA\\db\\wnba.duckdb"
+}
