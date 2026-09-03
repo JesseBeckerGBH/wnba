@@ -8,6 +8,7 @@ logs/
 model/artifacts/*
 !model/artifacts/wnba_moneyline_v_20260617_172452_moneyline.pkl
 !model/artifacts/wnba_moneyline_v_20260617_172452_moneyline.json
+!model/artifacts/team_features.json
 __pycache__/
 *.pyc
 *.pyo

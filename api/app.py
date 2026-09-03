@@ -1,4 +1,3 @@
-
 """Pickle-only WNBA moneyline HTTP API. No DuckDB/nba_api/ingest on boot."""
 from __future__ import annotations
 
@@ -19,10 +18,42 @@ _DEFAULT_PKL = (
     / "artifacts"
     / "wnba_moneyline_v_20260617_172452_moneyline.pkl"
 )
+_DEFAULT_FEATURES = _ROOT / "model" / "artifacts" / "team_features.json"
+_API_FEATURES = _ROOT / "api" / "team_features.json"
+
 MODEL_PATH = pathlib.Path(os.getenv("MODEL_PATH", str(_DEFAULT_PKL)))
-CACHE_PATH = pathlib.Path(
-    os.getenv("TEAM_FEATURES_PATH", str(_ROOT / "api" / "team_features.json"))
-)
+
+def _features_path() -> pathlib.Path:
+    env = os.getenv("FEATURES_PATH") or os.getenv("TEAM_FEATURES_PATH")
+    if env:
+        return pathlib.Path(env)
+    if _DEFAULT_FEATURES.exists():
+        return _DEFAULT_FEATURES
+    return _API_FEATURES
+
+
+FEATURES_PATH = _features_path()
+
+# Hardcoded from model/stack_train.py ML_FEATURE_COLS. stack_train imports
+# duckdb at module import, so we do not import it in this process.
+ML_FEATURE_COLS = [
+    "rolling_win_rate_diff",
+    "rolling_pts_diff",
+    "rolling_net_pts_diff",
+    "rolling_fg_pct_diff",
+    "rolling_fg3_pct_diff",
+    "rolling_tov_rate_diff",
+    "rolling_reb_margin_diff",
+    "net_rating_diff",
+    "pace_diff",
+    "days_rest_diff",
+    "b2b_diff",
+    "elo_diff",
+    "h2h_win_rate",
+    "h2h_meetings",
+    "home_advantage",
+    "sentiment_diff",
+]
 
 # Orientation: home_win_prob is P(home win) == predict_proba[:, 1]
 # against training target home_win. --home is the home team, not "favorite".
@@ -39,24 +70,7 @@ def _load_moneyline():
     meta = {}
     if meta_path.exists():
         meta = json.loads(meta_path.read_text(encoding="utf-8"))
-    feature_cols = meta.get("feature_cols") or [
-        "rolling_win_rate_diff",
-        "rolling_pts_diff",
-        "rolling_net_pts_diff",
-        "rolling_fg_pct_diff",
-        "rolling_fg3_pct_diff",
-        "rolling_tov_rate_diff",
-        "rolling_reb_margin_diff",
-        "net_rating_diff",
-        "pace_diff",
-        "days_rest_diff",
-        "b2b_diff",
-        "elo_diff",
-        "h2h_win_rate",
-        "h2h_meetings",
-        "home_advantage",
-        "sentiment_diff",
-    ]
+    feature_cols = meta.get("feature_cols") or list(ML_FEATURE_COLS)
     medians = np.array(
         meta.get("col_medians") or [0.0] * len(feature_cols), dtype=np.float32
     )
@@ -64,8 +78,8 @@ def _load_moneyline():
 
 
 def _load_cache() -> dict:
-    if CACHE_PATH.exists():
-        return json.loads(CACHE_PATH.read_text(encoding="utf-8"))
+    if FEATURES_PATH.exists():
+        return json.loads(FEATURES_PATH.read_text(encoding="utf-8"))
     return {"teams": {}, "h2h": {}}
 
 
@@ -140,7 +154,14 @@ def _ml_vec(home_f: dict, away_f: dict, h2h_rate: float, h2h_count: int) -> dict
 
 @app.get("/health")
 def health():
-    return {"status": "ok"}
+    teams = TEAM_CACHE.get("teams") or {}
+    return {
+        "status": "ok",
+        "model": ML_META.get("version", MODEL_PATH.name),
+        "n_team_keys": len(teams),
+        "features_path": str(FEATURES_PATH),
+        "orientation": ORIENTATION,
+    }
 
 
 @app.post("/predict")
@@ -156,6 +177,7 @@ def predict_endpoint(body: PredictIn):
     vec = _ml_vec(home_f, away_f, h2h_rate, h2h_count)
     X = np.array([[vec.get(c, 0.0) for c in FEATURE_COLS]], dtype=np.float32)
     X = np.where(np.isnan(X), MEDIANS, X)
+    # Orientation OK: --home is P(home win). Do not invert predict_proba[:, 1].
     home_win_prob = float(ML_MODEL.predict_proba(X)[0][1])
     away_win_prob = 1.0 - home_win_prob
 
@@ -168,12 +190,12 @@ def predict_endpoint(body: PredictIn):
         "ml_auc": ML_META.get("auc_test"),
         "orientation": ORIENTATION,
     }
-    if body.ml_home:
+    if body.ml_home is not None:
         impl_home = 1.0 / body.ml_home
         out["impl_home"] = impl_home
         out["ml_edge_home"] = home_win_prob - impl_home
         out["ml_home"] = body.ml_home
-    if body.ml_away:
+    if body.ml_away is not None:
         impl_away = 1.0 / body.ml_away
         out["impl_away"] = impl_away
         out["ml_edge_away"] = away_win_prob - impl_away
