@@ -1,8 +1,9 @@
-FROM python:3.14-slim-bookworm
+FROM python:3.12-slim-bookworm
 
 WORKDIR /app
 
-# Match venv Python 3.14 that loads sklearn==1.7.2 pickle.
+# Python 3.12 image: sklearn==1.7.2 linux wheels + proven Railway unpickle.
+# Local venv is 3.14 and also loads the same pickle; 3.12 chosen for manylinux wheels.
 # LightGBM needs libgomp; slim image does not ship it.
 RUN apt-get update && apt-get install -y --no-install-recommends libgomp1 \
     && rm -rf /var/lib/apt/lists/*
