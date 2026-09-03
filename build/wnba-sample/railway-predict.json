@@ -1,0 +1,11 @@
+{
+  "url": "https://wnba-production-de94.up.railway.app",
+  "project": "https://railway.com/project/0d878d4d-7d20-4150-9502-c706ea9e3772",
+  "image": "python:3.12-slim-bookworm + scikit-learn==1.7.2 + libgomp1",
+  "health_curl": "curl -sS https://wnba-production-de94.up.railway.app/health",
+  "health_http": 200,
+  "health_json": {"status":"ok","model":"v_20260617_172452_moneyline","n_team_keys":30,"features_path":"/app/api/team_features.json","orientation":"orientation OK: --home is P(home win); model disagrees with market"},
+  "predict_curl": "curl -sS -H \"Content-Type: application/json\" -d \"{\\"home\\":\\"Las Vegas Aces\\",\\"away\\":\\"New York Liberty\\",\\"ml_home\\":1.65,\\"ml_away\\":2.30,\\"total_line\\":162.5,\\"over_odds\\":1.91,\\"under_odds\\":1.91}\" https://wnba-production-de94.up.railway.app/predict",
+  "predict_http": 200,
+  "predict_json": {"home":"Las Vegas Aces","away":"New York Liberty","home_win_prob":0.2667741763716996,"away_win_prob":0.7332258236283005,"ml_version":"v_20260617_172452_moneyline","ml_auc":0.7523,"orientation":"orientation OK: --home is P(home win); model disagrees with market","impl_home":0.6060606060606061,"ml_edge_home":-0.3392864296889065,"ml_home":1.65,"impl_away":0.4347826086956522,"ml_edge_away":0.29844321493264825,"ml_away":2.3,"total_line":162.5,"note_totals":"totals pickle not scored in pickle-only moneyline app","over_odds":1.91,"under_odds":1.91}
+}
