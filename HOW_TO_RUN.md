@@ -142,3 +142,7 @@ Then ask Claude: *"Run the WNBA bet sheet for today"*
 Toronto Tempo and Portland Fire join in 2026. They have no historical data.
 The model uses league average features for them — predictions will be less reliable
 for the first 10-15 games. Reduce stake or skip until they have a track record.
+
+## Runtime note (run/wnba-v1)
+
+Use D:\\WNBA\\venv\\Scripts\\python.exe (Python 3.14). Ignore py -3.13.
