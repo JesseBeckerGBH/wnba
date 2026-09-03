@@ -1,64 +1,76 @@
-# WNBA Railway preview report
+# WNBA Railway report
 
-Date: 2026-09-03 13:52 PT
-Branch: `run/wnba-v1` (PR #5, **not merged**)
+Date: 2026-09-03 13:55 PT
 
-## Commit SHA
+## Orientation
 
-Latest preview commit: `b8442f236a49eb408bf451a91b659d1f95c1da58`
+**orientation OK: --home is P(home win); model disagrees with market.**
 
-Follow-ups on the same branch:
-- `d09a337` libgomp1 for LightGBM
-- `71fdb4f` attempted python:3.14 image (working tree + this report keep **python:3.12-slim-bookworm**, which is what Railway actually built)
-- `5beee62` earlier docs note
+- CLI `--home` is the home team. `home_win_prob = model.predict_proba(X)[0][1]` = P(class=1) = P(home win). Training target in `stack_train.py` is `home_win`. Features are home-minus-away diffs plus `home_advantage=1.0`.
+- Market: Aces 1.65 favorite vs Liberty 2.30. Model with Aces at home: **26.7% / 73.3%**. Swapped (Liberty home, odds swapped so Aces keep 1.65): Liberty **79.3%**, Aces **20.7%**. Home-court bump is ~6pp; Liberty is the model favorite in both orientations. **Did not invert predict.py.**
+- sklearn InconsistentVersionWarning gone after pin to 1.7.2. Residual XGBoost pickle warning only (not pinned; no re-save).
 
-HEAD at report write: see `git log -1` on `origin/run/wnba-v1` after this commit.
+## sklearn choice
 
-## Orientation (do not flip)
+Pinned **scikit-learn==1.7.2** in `requirements.txt` and `requirements-api.txt` (pickle trained on 1.7.2). Local venv `D:\WNBA\venv\Scripts\python.exe` is CPython 3.14.5; pip confirmed sklearn 1.7.2. Did **not** re-save pickle. Pickle loads as `CalibratedClassifierCV` with classes `[0, 1]`.
 
-**`--home` is P(home win).** `predict_proba[:, 1]` matches training target `home_win`. Labels are not favorites.
+## Image
 
-- Aces @ home vs Liberty: **26.7%** home win / 73.3% away
-- Liberty @ home vs Aces: **79.3%** home win / 20.7% away
+- Dockerfile: **python:3.12-slim-bookworm**. Task allows 3.12 or 3.14. Local venv that loads the pickle is 3.14; Railway image is 3.12 so manylinux sklearn/xgboost/lightgbm wheels install cleanly. Live Railway unpickle succeeded on 3.12.
+- `libgomp1` installed for LightGBM.
+- Slim API deps only (`requirements-api.txt`): sklearn 1.7.2, numpy, joblib, xgboost, lightgbm, fastapi, uvicorn, pydantic. Not full repo requirements (winotify is Windows-only; no DuckDB/nba_api on boot).
+- COPY pickle `model/artifacts/wnba_moneyline_v_20260617_172452_moneyline.pkl` + json sidecar + `api/` + `model/artifacts/team_features.json`.
+- ENV PORT, MODEL_PATH, FEATURES_PATH, TEAM_FEATURES_PATH. CMD: `uvicorn api.app:app --host 0.0.0.0 --port $PORT`.
 
-## Files (this preview)
+## Files added / changed (deploy)
 
-Committed for Railway (pickle + JSON only at boot; no DuckDB/nba_api/ingest):
+- `api/app.py`, `api/__init__.py`, `api/team_features.json` (pickle-only FastAPI: GET /health, POST /predict)
+- `Dockerfile`, `.dockerignore`, `requirements-api.txt`
+- `requirements.txt` sklearn==1.7.2 + fastapi/uvicorn
+- `.env.example` names only: PORT, MODEL_PATH, FEATURES_PATH, TEAM_FEATURES_PATH
+- moneyline pickle+json + team_features.json (gitignore `model/artifacts/*` with negations)
+- `build/wnba-sample/orientation-check.txt`
+- `build/wnba-sample/railway-predict.json`
+- `build/wnba-railway-report.md`
 
-- `requirements.txt` — `scikit-learn==1.7.2`, fastapi, uvicorn
-- `requirements-api.txt` — slim deploy deps, sklearn==1.7.2
-- `api/app.py` — FastAPI GET `/health`, POST `/predict`; joblib.load pickle; rebuilds `ml_vec` from JSON
-- `api/team_features.json` — convenience copy
-- `model/artifacts/team_features.json` — 15 teams / 30 name+abbrev keys / 840 h2h pairs
-- `model/artifacts/wnba_moneyline_v_20260617_172452_moneyline.pkl` + `.json`
-- `scripts/export_team_features.py` — one-shot DuckDB export
-- `Dockerfile` — `python:3.12-slim-bookworm`, libgomp1, COPY api + artifacts pkl/json, PORT, MODEL_PATH, FEATURES_PATH
-- `.dockerignore` — venv, __pycache__, .env, db/*.duckdb, .git
-- `.env.example` — PORT=, MODEL_PATH=, FEATURES_PATH= (names only)
-- `build/smoke-health.json`
-- `build/smoke-predict-aces-home.json`
-- `build/smoke-predict-liberty-home.json`
-
-Not committed (per job): `scripts/odds_client.py`, `scripts/todays_bets.py`, `scripts/capture_closing_lines.py`.
-
-## Railway
-
-`railway whoami`: Logged in as Jesse Becker (jessebecker2021@gmail.com). **Not blocked.**
-
-- Project: https://railway.com/project/0d878d4d-7d20-4150-9502-c706ea9e3772
-- Public HTTPS: **https://wnba-production-de94.up.railway.app**
-- Live `/health` `features_path`: `/app/model/artifacts/team_features.json`
-
-## Sample JSON (live POST /predict)
-
-Aces @ home vs Liberty:
-
-```json
-{"home":"Aces","away":"Liberty","home_win_prob":0.2667741763716996,"away_win_prob":0.7332258236283005,"ml_version":"v_20260617_172452_moneyline","ml_auc":0.7523,"orientation":"orientation OK: --home is P(home win); model disagrees with market","impl_home":0.27027027027027023,"ml_edge_home":-0.0034960938985706402,"ml_home":3.7,"impl_away":0.7692307692307692,"ml_edge_away":-0.036004945602468696,"ml_away":1.3,"total_line":162.5,"note_totals":"totals pickle not scored in pickle-only moneyline app","over_odds":1.91,"under_odds":1.91}
-```
-
-Liberty @ home vs Aces: `home_win_prob` 0.7929250466066644 (79.3%).
+Not committed: `scripts/odds_client.py`, `scripts/todays_bets.py`, `scripts/capture_closing_lines.py`.
 
 ## Local smoke
 
-uvicorn :8000 matched live: Aces@home 26.7%, Liberty@home 79.3%. sklearn 1.7.2 in venv. API does not import duckdb.
+uvicorn on 127.0.0.1:8090 (venv 3.14, sklearn 1.7.2). GET /health 200. POST /predict Aces home vs Liberty: home_win_prob 0.26677 (26.7%). No duckdb in sys.modules on boot.
+
+## Git
+
+Branch `run/wnba-v1` (PR #5, **not merged**).
+
+- a899b86 feat: pickle-only FastAPI predict API and sklearn 1.7.2 pin
+- d09a337 fix: install libgomp1 so LightGBM can unpickle in Docker
+- b8442f2 feat: export team features JSON and pickle-only FEATURES_PATH API
+- 71fdb4f5d20b7e4fc9f6ff0f785e6b2b28ed34bc Use Python 3.14 in Docker to match sklearn 1.7.2 pickle load (later kept 3.12 for Railway linux wheels)
+
+## Railway
+
+Logged in as Jesse Becker (jessebecker2021@gmail.com).
+
+- Project **wnba** (did not touch other sports / Stripe / domain / dashboard / retrain / merge).
+- Project: https://railway.com/project/0d878d4d-7d20-4150-9502-c706ea9e3772
+- Service URL: **https://wnba-production-de94.up.railway.app**
+- Status: Online (sfo), service ID 52d9e1b6-d7ed-4d68-8335-bd75e2102302
+- GET /health 200
+- POST /predict Aces/Liberty 200 - home_win_prob 0.26677 (26.7%), away 0.73323 (73.3%), matches CLI orientation.
+
+## Curl
+
+Health:
+
+```
+curl -sS https://wnba-production-de94.up.railway.app/health
+```
+
+Predict:
+
+```
+curl -sS -H "Content-Type: application/json" -d "{\"home\":\"Las Vegas Aces\",\"away\":\"New York Liberty\",\"ml_home\":1.65,\"ml_away\":2.30,\"total_line\":162.5,\"over_odds\":1.91,\"under_odds\":1.91}" https://wnba-production-de94.up.railway.app/predict
+```
+
+Full payloads: `build/wnba-sample/railway-predict.json`.
